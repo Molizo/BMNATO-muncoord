@@ -144,79 +144,7 @@ export default class Onboard extends React.Component<Props, State> {
     const { user, template } = this.state;
 
     return (
-      <React.Fragment>
-        {!user && <Message
-          error
-          attached="top"
-          content="Log in or create an account to continue"
-        />}
-        <Segment attached={!user ? 'bottom' : undefined} >
-          <Form onSubmit={this.handleSubmit}>
-            <Form.Group unstackable>
-              <Form.Dropdown
-                label="Template"
-                name="template"
-                width={14}
-                search
-                clearable
-                selection
-                placeholder="Template to skip manual member creation (optional)"
-                options={Object.values(CommitteeTemplate).map(makeDropdownOption)}
-                onChange={this.onChangeTemplateDropdown}
-              />
-              <Popup 
-                basic 
-                pinned 
-                hoverable 
-                position="top left"
-                trigger={
-                  <Form.Button 
-                    type="button"
-                    icon='question circle outline'
-                    width={1}
-                  />}>
-                <Popup.Content>
-                  {this.renderCountriesTable(template)}
-                </Popup.Content>
-              </Popup>
-            </Form.Group>
-            <Form.Input
-              label="Name"
-              name="name"
-              fluid
-              value={this.state.name}
-              required
-              error={!this.state.name}
-              placeholder="Committee name"
-              onChange={this.handleInput}
-            />
-            <Form.Input
-              label="Topic"
-              name="topic"
-              value={this.state.topic}
-              fluid
-              placeholder="Committee topic"
-              onChange={this.handleInput}
-            />
-            <Form.Input
-              label="Conference"
-              name="conference"
-              value={this.state.conference}
-              fluid
-              placeholder="Conference name"
-              onChange={this.handleInput}
-            />
-            <Form.Button
-              primary
-              fluid
-              disabled={!this.state.user || this.state.name === ''}
-            >
-              Create committee
-              <Icon name="arrow right" />
-            </Form.Button>
-          </Form>
-        </Segment>
-      </React.Fragment>
+      <p></p>
     );
   }
 
@@ -224,9 +152,9 @@ export default class Onboard extends React.Component<Props, State> {
     return (
       <Container style={{ padding: '1em 0em' }}>
         <Helmet>
-          <title>{`Create Committee - Muncoordinated`}</title>
+          <title>{`Create Committee - BMNATO Chairing`}</title>
           <meta name="description" content="Login, create an account, or create
-                                      a committee with Muncoordinated now!" />
+                                      a committee with BMNATO Chairing now!" />
         </Helmet>
         <ConnectionStatus />
         <Grid
@@ -236,12 +164,12 @@ export default class Onboard extends React.Component<Props, State> {
           <Grid.Row>
             <Grid.Column>
               <Header as="h1" textAlign='center'>
-                Muncoordinated
+                BMNATO Chairing
               </Header>
               <Message>
                 <Message.Header>Browser compatibility notice</Message.Header>
                   <p>
-                  Muncoordinated works best with newer versions of <a 
+                  BMNATO Chairing works best with newer versions of <a 
                     href="https://www.google.com/chrome/">Google Chrome</a>.
                    Use of other/older browsers has caused bugs and data loss.
                   </p>
@@ -251,9 +179,6 @@ export default class Onboard extends React.Component<Props, State> {
           <Grid.Row>
             <Grid.Column>
               <Login allowNewCommittee={false} />
-            </Grid.Column>
-            <Grid.Column>
-              {this.renderNewCommitteeForm()}
             </Grid.Column>
           </Grid.Row>
         </Grid>

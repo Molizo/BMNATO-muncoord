@@ -191,7 +191,7 @@ export class Login extends React.Component<Props, State> {
       <List.Item key={'add'}>
         <List.Content>
           <List.Header as="a" href={'/onboard'}>
-            <Icon name="plus" />Create new committee
+            View all committees
           </List.Header>
         </List.Content>
       </List.Item>
@@ -300,35 +300,15 @@ export class Login extends React.Component<Props, State> {
     );
 
     const renderCreateAccountButton = () => (
-      <Button 
-        positive
-        onClick={this.toCreateAccountMode}
-      >
-        Create account <Icon name="arrow right" />
-      </Button>
+      <p></p>
     );
 
     const renderSubmitCreateAccountButton = () => (
-      <Button 
-        positive
-        fluid
-        onClick={this.createAccount} 
-        loading={creating} 
-        disabled={!email || !password}
-        type="submit"
-      >
-        Create account
-      </Button>
+      <p></p>
     )
 
     const renderForgotPasswordButton = () => (
-      // eslint-disable-next-line jsx-a11y/anchor-is-valid
-      <a 
-        onClick={this.toForgotPasswordMode} 
-        style={{'cursor': 'pointer'}}
-      >
-        Forgot password?
-      </a>
+      <p></p>
     );
 
     const renderToLoginButton = () => (
@@ -347,16 +327,7 @@ export class Login extends React.Component<Props, State> {
     );
 
     const renderSendResetEmailButton = () => (
-      <Button 
-        primary
-        fluid
-        onClick={this.resetPassword} 
-        loading={resetting} 
-        disabled={!email}
-        type="submit"
-      >
-        Send reset email
-      </Button>
+      <p></p>
     );
 
     const err = this.state.error;
@@ -423,8 +394,6 @@ export class Login extends React.Component<Props, State> {
             {this.renderError()}
             {mode === Mode.Login && <Button.Group fluid widths='2'>
                {renderLogInButton()}
-               <Button.Or />
-               {renderCreateAccountButton()}
             </Button.Group>}
             {mode === Mode.ForgotPassword && renderSendResetEmailButton()}
             {mode === Mode.CreateAccount && renderSubmitCreateAccountButton()}
