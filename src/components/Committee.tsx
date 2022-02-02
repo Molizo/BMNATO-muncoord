@@ -335,6 +335,12 @@ function ResponsiveNav(props: ResponsiveContainerProps) {
     return (
       <React.Fragment>
         <Menu.Item
+        header
+        key="header"
+      >
+        BMNATO Chairing
+      </Menu.Item>
+        <Menu.Item
           header
           key="header"
           onClick={() => props.history.push(`/committees/${committeeID}`)}
@@ -435,7 +441,7 @@ export default class Committee extends React.Component<Props, State> {
     return (
       <Container text style={{ padding: '1em 0em' }}>
         <Helmet>
-          <title>{`${committee?.name} - Muncoordinated`}</title>
+          <title>{`${committee?.name} - BMNATO Chairing`}</title>
         </Helmet>
         <Header as="h1">
           <Input

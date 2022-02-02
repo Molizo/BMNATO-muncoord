@@ -13,7 +13,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Onboard from './components/Onboard';
-import Homepage from './components/Homepage';
+import Homepage from './components/Onboard';
 import Committee from './components/Committee';
 import { NotFound } from './components/NotFound';
 

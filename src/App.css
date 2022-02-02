@@ -6,3 +6,25 @@
 .ui.dropdown.centered {
   text-align: center;
 }
+
+.ui.small.menu {
+  background: #006cff;
+  color: white;
+  border-radius: 0;
+}
+
+.ui.small.menu > *{
+  color: white !important;
+}
+
+.ui.small.menu > *> *{
+  color: white !important;
+}
+
+.ui.small.menu > *> *{
+  color: white !important;
+}
+
+.nav__auth-status{
+  background:rgb(38, 46, 53) !important;
+}

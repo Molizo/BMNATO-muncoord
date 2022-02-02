@@ -48,39 +48,19 @@ export default class Help extends React.PureComponent<{}, {}> {
     return (
       <Container text style={{ padding: '1em 0em' }}>
         <Helmet>
-          <title>{`Help - Muncoordinated`}</title>
+          <title>{`Help - BMNATO Chairing`}</title>
         </Helmet>
         <Header as="h3" attached="top">Keyboard shortcuts</Header>
         <Segment attached="bottom">
         {KEYBOARD_SHORTCUT_LIST}
         </Segment>
-        <Header as="h3" attached="top">Bug reporting &amp; help requests</Header>
+        <Header as="h3" attached="top">Help requests</Header>
         <Segment attached="bottom">
-          In the event that a bug or issue crops up, follow these steps:
-          <br />
-          <List ordered>
-            <List.Item>
-              Create an issue on the <a href="https://github.com/MaxwellBo/Muncoordinated-2/issues">
-                Muncoordinated issue tracking page
-              </a>. You can also use this for help requests regarding the apps usage
-            </List.Item>
-            <List.Item>
-              Describe what you intended to do
-            </List.Item>
-            <List.Item>
-              Describe what happened instead 
-            </List.Item>
-            <List.Item>
-              List the version of the app you're using (<VersionLink version={CLIENT_VERSION} />)
-            </List.Item>
-            <List.Item>
-              List the time, date, and browser that you were using when this occured
-            </List.Item>
-          </List>
+          In the event that a bug or issue crops up, please contact Mihnea Visoiu, +40755155351
         </Segment>
         <Header as="h3" attached="top">License</Header>
         <Segment attached="bottom">
-          Muncoordinated is licensed under {gpl}
+          BMNATO Chairing is licensed under {gpl}. Based on Muncoordinated.
         </Segment>
       </Container>
     );
