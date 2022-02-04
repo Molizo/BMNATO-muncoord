@@ -32,7 +32,7 @@ import { fieldHandler } from '../actions/handlers';
 import { CommitteeTemplate, MemberOption } from '../constants';
 import { putStrawpoll } from '../actions/strawpoll-actions';
 import Strawpoll, { DEFAULT_STRAWPOLL, StrawpollID, StrawpollData } from './Strawpoll';
-import { logClickSetupCommittee } from '../analytics';
+import { logClickCountriesCommittee } from '../analytics';
 
 export function recoverMemberOptions(committee?: CommitteeData): MemberOption[] {
   if (committee) {
@@ -348,7 +348,7 @@ function ResponsiveNav(props: ResponsiveContainerProps) {
         >
           {committee ? committee.name : <Loading small />}
         </Menu.Item>
-        {makeMenuItem('Setup', 'users')}
+        {makeMenuItem('Countries', 'users')}
         {makeMenuItem('Motions', 'sort numeric descending')}
         {makeMenuItem('Unmod', 'discussions')}
         <Dropdown key="caucuses" item text="Caucuses" loading={!committee}>
@@ -416,13 +416,13 @@ export default class Committee extends React.Component<Props, State> {
     this.state.committeeFref.off('value', this.firebaseCallback);
   }
 
-  gotoSetup = () => {
+  gotoCountries = () => {
     const { committeeID } = this.props.match.params;
 
     this.props.history
-      .push(`/committees/${committeeID}/setup`);
+      .push(`/committees/${committeeID}/countries`);
 
-    logClickSetupCommittee();
+    logClickCountriesCommittee();
   }
 
   renderAdmin = () => {
@@ -476,8 +476,8 @@ export default class Committee extends React.Component<Props, State> {
         </List>
         <CommitteeShareHint committeeID={this.props.match.params.committeeID} />
         <Segment textAlign="center" basic>
-          <Button as="a" primary size="large" onClick={this.gotoSetup}>
-            Setup committee
+          <Button as="a" primary size="large" onClick={this.gotoCountries}>
+            Manage countries
             <Icon name="arrow right" />
           </Button>
         </Segment>
@@ -496,7 +496,7 @@ export default class Committee extends React.Component<Props, State> {
             <ConnectionStatus />
           </Container>
           <Route exact={true} path="/committees/:committeeID" render={renderWelcome} />
-          <Route exact={true} path="/committees/:committeeID/setup" render={renderAdmin} />
+          <Route exact={true} path="/committees/:committeeID/countries" render={renderAdmin} />
           <Route exact={true} path="/committees/:committeeID/stats" component={Stats} />
           <Route exact={true} path="/committees/:committeeID/unmod" component={Unmod} />
           <Route exact={true} path="/committees/:committeeID/motions" component={Motions} />

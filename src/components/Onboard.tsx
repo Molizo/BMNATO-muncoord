@@ -163,9 +163,9 @@ export default class Onboard extends React.Component<Props, State> {
         >
           <Grid.Row>
             <Grid.Column>
-              <Header as="h1" textAlign='center'>
+              <h1 style={{textAlign:'center', color:'white'}}>
                 BMNATO Chairing
-              </Header>
+              </h1>
               <Message>
                 <Message.Header>Browser compatibility notice</Message.Header>
                   <p>

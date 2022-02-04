@@ -20,13 +20,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Muncoordinated</title>
-    <meta property="og:title" content="Muncoordinated">
-    <meta name="twitter:title" content="Muncoordinated">
+    <title>BMNATO Chairing</title>
+    <meta property="og:title" content="BMNATO Chairing">
+    <meta name="twitter:title" content="BMNATO Chairing">
 
-    <meta property="og:url" content="https://muncoordinated.io/" />
+    <meta property="og:url" content="https://chairing.bucharestmodelnato.org" />
 
-    <meta property="og:image" content="https://emojipedia-us.s3.amazonaws.com/thumbs/120/facebook/138/flag-for-united-nations_1f1fa-1f1f3.png" />
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/3/37/Flag_of_NATO.svg" />
 
     <meta property="og:type" content="website" />
 
@@ -35,11 +35,68 @@
     <meta name="keywords" content="mun, model, un, software, app, application, muncoordinated, chair, cross, multi, platform, mobile">
 
     <meta name="author" content="Max Bo">
+    <style>
+      
 
-    <meta name="description" content="Muncoordinated is a collaborative browser-based Model UN committee management software suite.
-     It's also free and open-source, with a comprehensive feature set and a director-first user interface.">
-    <meta property="og:description" content="Muncoordinated is a collaborative browser-based Model UN committee management software suite.
-     It's also free and open-source, with a comprehensive feature set and a director-first user interface.">
+/* BG Animation code */
+html {
+  height:100%;
+}
+
+.bg {
+  animation:slide 9s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #060282 50%, #006db3 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:12s;
+}
+
+.bg3 {
+  animation-duration:15s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.ui.text.container{
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 0.2rem !important;
+  padding-left:1rem !important;
+  padding-right:1rem !important;
+}
+
+.ui.attached.tabular.menu > .item{
+  background: lightgray;
+  border-radius: .28571429rem .28571429rem 0 0 !important;
+}
+
+.ui.attached.tabular.menu > .item:hover{
+  background: white;
+}
+
+.bmnato-logo{
+  position:fixed;
+  bottom:3rem;
+  right:3rem;
+  height:10vh;
+  width:auto;
+}
+    </style>
 
   </head>
   <body>
@@ -47,6 +104,12 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+<img class="bmnato-logo" src="/bmnato_logo.png">
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

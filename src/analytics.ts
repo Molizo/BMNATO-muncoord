@@ -62,11 +62,11 @@ export function logCreateCommittee(committeeID: string | undefined) {
  * Committee
  */
 
-export function logClickSetupCommittee() {
-  send('clickSetupCommitteeCommitteeButton', {
+export function logClickCountriesCommittee() {
+  send('clickCountriesCommitteeCommitteeButton', {
     action: 'click',
-    category: 'SetupCommitteeCommitteeButton',
-    label: '[Setup committee ->] @ Committee'
+    category: 'CountriesCommitteeCommitteeButton',
+    label: '[Countries committee ->] @ Committee'
   });
 }
 
@@ -83,9 +83,9 @@ export function logCreateMember(name: string) {
 }
 
 export function logClickGeneralSpeakersList() {
-  send('clickGeneralSpeakersListSetupButton', {
+  send('clickGeneralSpeakersListCountriesButton', {
     action: 'click',
-    category: 'GeneralSpeakersListSetupButton'
+    category: 'GeneralSpeakersListCountriesButton'
   });
 }
 
